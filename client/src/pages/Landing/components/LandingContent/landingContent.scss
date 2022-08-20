@@ -1,0 +1,91 @@
+@import '../../../../index.scss';
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 5%;
+
+  .heading-h3 {
+    margin-top: 70px;
+
+    @include small-device {
+      margin-top: 36px;
+    }
+  }
+
+  .service-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 863px;
+    margin: 70px 16px;
+
+    @include small-device {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 36px 16px 70px;
+
+      &:first-of-type {
+        flex-direction: column-reverse;
+        margin-bottom: 0;
+      }
+    }
+
+    &_description {
+      max-width: 375px;
+      margin: 12px 24px;
+
+      @include small-device {
+        max-width: 425px;
+      }
+    }
+
+    &_images {
+      position: relative;
+    }
+
+    &_image {
+      height: 445px;
+      width: 370px;
+
+      @include small-device {
+        height: 370px;
+        width: 307px;
+      }
+    }
+
+    &_background-image-right {
+      position: absolute;
+      z-index: -1;
+      top: 60px;
+      left: 300px;
+
+      @include small-device {
+        display: none;
+      }
+    }
+
+    &_background-image-left {
+      position: absolute;
+      z-index: -1;
+      top: 60px;
+      right: 300px;
+
+      @include small-device {
+        display: none;
+      }
+    }
+
+    .heading-h4 {
+      margin-top: 10px;
+    }
+
+    .content-description {
+      margin: 24px 0;
+    }
+  }
+}

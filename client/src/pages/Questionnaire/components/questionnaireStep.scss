@@ -1,0 +1,80 @@
+@import '../../../index.scss';
+
+.questionnaire-step {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  &_question {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .heading-h4 {
+      margin: 24px;
+      text-align: center;
+    }
+  }
+
+  &_options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 24px;
+
+    .option-wrapper {
+      @include small-device {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+      }
+
+      img {
+        width: 150px;
+      }
+    }
+
+    .option {
+      cursor: pointer;
+      font-size: 24px;
+      margin: 24px;
+      border-radius: 50%;
+      padding: 12px;
+
+      @include small-device {
+        margin: 0;
+      }
+    }
+
+    .isSelected {
+      border: 1px dotted $dark-green;
+    }
+
+    input {
+      visibility: hidden;
+    }
+  }
+
+  &_navigation-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-width: 50%;
+
+    @include small-device {
+      width: 100%;
+      justify-content: center;
+    }
+
+    button {
+      margin: 24px;
+    }
+  }
+}

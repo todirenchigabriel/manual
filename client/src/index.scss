@@ -1,0 +1,136 @@
+// colors
+$white: #fff;
+$black: #000;
+$burgundy: #7e0707;
+$dark-green: #0b3b3c;
+$light-green: #e8efe9;
+$faded-green: #6d8a83;
+$light-gray: #bdcdc5;
+
+// breakpoints
+$small-device-breakpoint: 768px;
+
+// small devices
+@mixin small-device {
+  @media (max-width: #{$small-device-breakpoint}) {
+    @content;
+  }
+}
+
+@font-face {
+  font-family: 'TTNorms';
+  src: url('../src/assets/fonts/TTNorms-Regular.otf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'TTNorms';
+  scroll-behavior: smooth;
+  width: 100vw;
+  height: 100vh;
+}
+
+.content-description {
+  color: $dark-green;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  margin: 0;
+
+  @include small-device {
+    font-size: 16px;
+  }
+}
+
+.heading-h1 {
+  color: $dark-green;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 90px;
+  line-height: 90px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 4px;
+
+  @include small-device {
+    font-size: 72px;
+  }
+}
+
+.heading-h3 {
+  font-size: 40px;
+  line-height: 60px;
+  color: $dark-green;
+  margin: 0;
+
+  @include small-device {
+    font-size: 32px;
+  }
+}
+
+.heading-h4 {
+  font-size: 28px;
+  line-height: 40px;
+  text-align: left;
+  margin: 0;
+
+  @include small-device {
+    font-size: 22px;
+  }
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 15px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: $faded-green;
+}
+
+.primary-button {
+  cursor: pointer;
+
+  padding: 15px 30px;
+  width: 200px;
+  height: 45px;
+  background: $burgundy;
+  color: $white;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 15px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: none;
+
+  &:hover {
+    background: rgba(126, 7, 7, 0.8);
+    border-color: rgba(126, 7, 7, 0.8);
+    transition: all 0.3s;
+  }
+}
+
+.secondary-button {
+  cursor: pointer;
+
+  padding: 15px 30px;
+  width: 200px;
+  height: 45px;
+  background: $dark-green;
+  color: $white;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 15px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: none;
+
+  &:hover {
+    background: $faded-green;
+    border-color: $faded-green;
+    transition: all 0.3s;
+  }
+}
